@@ -1,14 +1,4 @@
-/*import React from "react";
-
-export default function CompanyDetailsPage({params,} : {params: {id: string}}) {
-
-    return (
-        <div className="content-component">
-
-        </div>
-    );
-
-}*/
+"use client";
 
 
 
@@ -36,51 +26,62 @@ export default function CompanyDetailsPage({params,} : {params: {id: string}}) {
 
 
 
+import React, { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
 
-import React from "react";
+// 🟢 MOCK DATA
+const mockCompanies = [
+  {
+    id: "1",
+    name: "Company A",
+    employees: 120,
+    type: "Tech",
+    location: "Colombo, Sri Lanka",
+    openJobs: 12,
+    roles: "Frontend, Backend, QA Engineer",
+    salary: "$500 - $2000",
+    hiringStatus: "Actively Hiring",
+    interviewQuestions: [
+      "What is React?",
+      "Explain OOP concepts"
+    ]
+  },
+  {
+    id: "2",
+    name: "Company B",
+    employees: 80,
+    type: "Finance",
+    location: "Kandy, Sri Lanka",
+    openJobs: 5,
+    roles: "Accountant",
+    salary: "$400 - $1500",
+    hiringStatus: "Coming Soon",
+    interviewQuestions: []
+  }
+];
 
-export default async function CompanyDetailsPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+export default function CompanyDetailsPage() {
+  const params = useParams();
+  const id = params.id as string;
 
-  const { id } = await params;
+  const [company, setCompany] = useState<typeof mockCompanies[0] | null>(null);
+  const [questions, setQuestions] = useState<string[]>([]);
+  const [input, setInput] = useState<string>("");
 
-  // 🟢 MOCK DATA (same file)
-  const mockCompanies = [
-    {
-      id: "1",
-      name: "Company A",
-      employees: 120,
-      type: "Tech",
-      location: "Colombo, Sri Lanka",
-      openJobs: 12,
-      roles: "Frontend, Backend, QA Engineer",
-      salary: "$500 - $2000",
-      hiringStatus: "Actively Hiring",
-      interviewQuestions: [
-        "What is React?",
-        "Explain OOP concepts"
-      ]
-    },
-    {
-      id: "2",
-      name: "Company B",
-      employees: 80,
-      type: "Finance",
-      location: "Kandy, Sri Lanka",
-      openJobs: 5,
-      roles: "Accountant",
-      salary: "$400 - $1500",
-      hiringStatus: "Coming Soon",
-      interviewQuestions: []
+  useEffect(() => {
+    const foundCompany = mockCompanies.find((c) => c.id === id);
+    setCompany(foundCompany || null);
+    if (foundCompany) {
+      setQuestions(foundCompany.interviewQuestions);
     }
-  ];
+  }, [id]);
 
-  const company = mockCompanies.find((c) => c.id === id);
+  const addQuestion = () => {
+    if (input.trim() === "") return;
+    setQuestions([...questions, input]);
+    setInput("");
+  };
 
-  // ❗ If not found
   if (!company) {
     return (
       <div className="content-component p-6">
@@ -88,23 +89,6 @@ export default async function CompanyDetailsPage({
       </div>
     );
   }
-
-  // ⚠️ IMPORTANT: convert to client logic using React state
-  // (Next.js requires this for interactivity)
-
-  "use client";
-
-  const ReactClient = require("react");
-  const { useState } = ReactClient;
-
-  const [questions, setQuestions] = useState(company.interviewQuestions);
-  const [input, setInput] = useState("");
-
-  const addQuestion = () => {
-    if (input.trim() === "") return;
-    setQuestions([...questions, input]);
-    setInput("");
-  };
 
   return (
     <div className="content-component p-6">
@@ -143,7 +127,7 @@ export default async function CompanyDetailsPage({
 
         {/* LIST */}
         <ul className="list-disc pl-6 space-y-1">
-          {questions.map((q, i) => (
+          {questions.map((q: string, i: number) => (
             <li key={i}>{q}</li>
           ))}
         </ul>
