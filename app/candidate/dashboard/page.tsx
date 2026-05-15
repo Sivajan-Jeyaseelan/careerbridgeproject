@@ -1,4 +1,4 @@
-import Scraper from "../components/scraper";
+import Scraper from "../../components/scraper";
 
 // ✅ TYPE INSIDE SAME FILE
 type Job = {

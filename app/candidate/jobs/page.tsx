@@ -21,6 +21,7 @@ export default function JobsPage() {
 
 
 import React from "react";
+import Card from "../../components/card";
 
 export default function JobsPage() {
 
@@ -142,8 +143,8 @@ export default function JobsPage() {
 
                 {jobs.map((job) => (
 
-                    <div key={job.id} className="bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-blue-300 transition-all duration-300 overflow-hidden group">
-                      
+                    
+                    <Card key={job.id}> 
                         <div className="h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
 
                         <div className="p-6">
@@ -189,7 +190,9 @@ export default function JobsPage() {
 
                         </div>
 
-                    </div>
+                    </Card>    
+
+                    
 
                 ))}
 

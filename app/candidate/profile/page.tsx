@@ -1,9 +1,13 @@
+import Card from "../../components/card";
+
+
 export default function Profile() {
   return (
     <div>
       <h1>👤 Candidate Profile</h1>
 
-      <div style={{ marginTop: "20px" }}>
+      <Card>
+        <div style={{ marginTop: "20px" }}>
 
         <div style={{ marginBottom: "10px" }}>
           <label>Name:</label>
@@ -42,6 +46,8 @@ export default function Profile() {
         </button>
 
       </div>
+
+      </Card>
     </div>
   );
 }
