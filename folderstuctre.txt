@@ -1,0 +1,27 @@
+CAREER-BRIDGE/
+│
+├── .next/
+├── app/
+├── controllers/
+├── lib/
+├── Middleware/
+├── model/
+├── node_modules/
+├── public/
+├── service/
+├── styles/
+├── utils/
+├── validators/
+├── .env.local
+├── .gitignore
+├── AGENTS.md
+├── CLAUDE.md
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+└── README.md
+└── tailwind.config.ts
+└── tsconfig.json
