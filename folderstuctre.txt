@@ -1,27 +1,60 @@
 CAREER-BRIDGE/
 │
-├── .next/
-├── app/
-├── controllers/
-├── lib/
-├── Middleware/
-├── model/
-├── node_modules/
-├── public/
-├── service/
-├── styles/
-├── utils/
-├── validators/
-├── .env.local
-├── .gitignore
-├── AGENTS.md
-├── CLAUDE.md
-├── eslint.config.mjs
-├── next-env.d.ts
-├── next.config.ts
-├── package-lock.json
-├── package.json
-├── postcss.config.mjs
-└── README.md
-└── tailwind.config.ts
-└── tsconfig.json
+├──────── .next/
+|
+├──────── app/
+|           ├── admin/
+|           ├── candidate/
+|           |        ├── companies/
+|           |        ├── cv/
+|           |        ├── dasboard/
+|           |        ├── interviewcalendar/
+|           |        ├── jobs/
+|           |        ├── profile/
+|           |        ├── layout.tsx
+|           |        ├── sidebar.css   
+|           | 
+|           ├── company/
+|           ├── componenets/
+|           ├── mentor/
+|           ├── favicon.ico
+|           ├── gloabals.css
+|           ├── layout.tsx
+|           ├── page.tsx
+|
+├──────── controllers/
+|           ├── admin/
+|           ├── auth/
+|           ├── candidate/
+|           ├── company/
+|           ├── jobs/
+|           ├── mentor/
+|
+|
+├──────── lib/
+├──────── Middleware/
+├──────── model/
+├──────── node_modules/
+├──────── public/
+├──────── service/
+├──────── styles/
+├──────── utils/
+├──────── validators/
+|
+|
+|
+├──────── .env.local
+├──────── .gitignore
+├──────── AGENTS.md
+├──────── CLAUDE.md
+├──────── eslint.config.mjs
+├──────── next-env.d.ts
+├──────── next.config.ts
+├──────── package-lock.json
+├──────── package.json
+├──────── postcss.config.mjs
+├──────── README.md
+├──────── tailwind.config.ts
+├──────── tsconfig.json
+├──────── package-lock.json
+├──────── package.json

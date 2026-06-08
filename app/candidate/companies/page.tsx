@@ -12,10 +12,10 @@ export default function CompaniesPage() {
 
 ]);
 
-  return (
+  return (     
     <div className="content-component">
         <h1>Companies List</h1>
         <RenderCompanies companies={companies} />
     </div>
-  );
+  ); 
 } 
