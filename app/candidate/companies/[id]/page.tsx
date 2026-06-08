@@ -1,63 +1,43 @@
 "use client";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 
-// 🟢 MOCK DATA
+
 const mockCompanies = [
-  {
-    id: "1",
-    name: "Company A",
-    employees: 120,
-    type: "Tech",
-    location: "Colombo, Sri Lanka",
-    openJobs: 12,
-    roles: "Frontend, Backend, QA Engineer",
-    salary: "$500 - $2000",
-    hiringStatus: "Actively Hiring",
-    interviewQuestions: [
-      "What is React?",
-      "Explain OOP concepts"
-    ]
-  },
-  {
-    id: "2",
-    name: "Company B",
-    employees: 80,
-    type: "Finance",
-    location: "Kandy, Sri Lanka",
-    openJobs: 5,
-    roles: "Accountant",
-    salary: "$400 - $1500",
-    hiringStatus: "Coming Soon",
-    interviewQuestions: []
-  }
+
+    {
+      
+        id: "1",
+        name: "Company A",
+        employees: 120,
+        type: "Tech",
+        location: "Colombo, Sri Lanka",
+        openJobs: 12,
+        roles: "Frontend, Backend, QA Engineer",
+        salary: "$500 - $2000",
+        hiringStatus: "Actively Hiring",
+        interviewQuestions: [
+          "What is React?",
+          "Explain OOP concepts"
+        ]
+
+    },
+    {
+
+        id: "2",
+        name: "Company B",
+        employees: 80,
+        type: "Finance",
+        location: "Kandy, Sri Lanka",
+        openJobs: 5,
+        roles: "Accountant",
+        salary: "$400 - $1500",
+        hiringStatus: "Coming Soon",
+        interviewQuestions: []
+
+    }
+
 ];
 
 export default function CompanyDetailsPage() {

@@ -46,8 +46,8 @@ export default function SideNavBar() {
 
                 <li className="nav-item group">
                     <Link
-                        href="/candidate/cv"
-                        className={`nav-link ${pathname === "/candidate/cv" ? "active" : ""}`}
+                        href="/candidate/interviewcalendar"
+                        className={`nav-link ${pathname === "/candidate/interviewcalendar" ? "active" : ""}`}
                     >
                         <i className="fas fa-file"></i>
                         <span className="font-medium">Interview Calendar</span>
@@ -76,8 +76,8 @@ export default function SideNavBar() {
 
                 <li className="nav-item group">
                     <Link 
-                        href="/candidate/interviews"
-                        className={`nav-link ${pathname === "/candidate/interviews" ? "active" : ""}`}
+                        href="/candidate/cv"
+                        className={`nav-link ${pathname === "/candidate/cv" ? "active" : ""}`}
                     >
                         <i className="fas fa-question"></i>
                         <span className="font-medium">CV Builder</span>
