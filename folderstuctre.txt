@@ -7,7 +7,7 @@ CAREER-BRIDGE/
 |           ├── candidate/
 |           |        ├── companies/
 |           |        ├── cv/
-|           |        ├── dasboard/
+|           |        ├── dashboard/
 |           |        ├── interviewcalendar/
 |           |        ├── jobs/
 |           |        ├── profile/
@@ -18,11 +18,11 @@ CAREER-BRIDGE/
 |           ├── componenets/
 |           ├── mentor/
 |           ├── favicon.ico
-|           ├── gloabals.css
+|           ├── globals.css
 |           ├── layout.tsx
 |           ├── page.tsx
 |
-├──────── controllers/
+├──────── repositories/
 |           ├── admin/
 |           ├── auth/
 |           ├── candidate/
@@ -32,11 +32,11 @@ CAREER-BRIDGE/
 |
 |
 ├──────── lib/
-├──────── Middleware/
-├──────── model/
+├──────── middleware/
+├──────── models/
 ├──────── node_modules/
 ├──────── public/
-├──────── service/
+├──────── services/
 ├──────── styles/
 ├──────── utils/
 ├──────── validators/
